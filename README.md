@@ -1,0 +1,1 @@
+# This is my little Python program that I use for saving stock data to .pkl Pickle files
