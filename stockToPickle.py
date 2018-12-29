@@ -43,8 +43,9 @@ def main():
     #start = datetime.datetime(startYear,startMonth,startDay)
     end = datetime.datetime.now()
     myDF = getStockDF(stockTicker, start, end)
-
-    myFileName = stockTicker.lower() + '_' + start.strftime("%Y%m%d") + '_' + end.strftime("%Y%m%d") + '_data.pkl'
+    # I'm getting 502: Bad Gateway now, so this stuff with the folder below hasn't been tested yet.
+    targetFolder = 'data\\'
+    myFileName = targetFolder + stockTicker.lower() + '_' + start.strftime("%Y%m%d") + '_' + end.strftime("%Y%m%d") + '_data.pkl'
     savePickle(myDF, myFileName)
 
 if __name__ == '__main__':
