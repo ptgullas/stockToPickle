@@ -44,6 +44,7 @@ def main():
     end = datetime.datetime.now()
     myDF = getStockDF(stockTicker, start, end)
     # I'm getting 502: Bad Gateway now, so this stuff with the folder below hasn't been tested yet.
+    # Apparently, Morningstar's API was deprecated in 7/2018
     targetFolder = 'data\\'
     myFileName = targetFolder + stockTicker.lower() + '_' + start.strftime("%Y%m%d") + '_' + end.strftime("%Y%m%d") + '_data.pkl'
     savePickle(myDF, myFileName)
